@@ -5,16 +5,17 @@ PROGNAME=$(basename $0)
 usage() {
     
     cat <<EOF
-${PROGNAME}: Notifies in case permissions have changed on a given set of files.
+INSERT USAGE INFO HERE
 EOF
     exit 0
     
 }
 
-while getopts ":f:h" opt; do
+while getopts ":a:b:c:h" opt; do
     case $opt in
-	f) FILELIST=$(grep -v \# $OPTARG)
-	   ;;
+	a) $OPTARG;;
+	b) $OPTARG;;
+	c) $OPTARG;;
 	h) usage
 	   ;;
 	\?) usage
